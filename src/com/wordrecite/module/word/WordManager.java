@@ -33,8 +33,7 @@ public class WordManager {
 		List<Word> wordList = new ArrayList<Word>();
 
 		/* 从数据库取 */
-		String sql = "select * from wr_word limit " + offset + " ," + limit
-				+ "order by id asc";
+		String sql = "select * from wr_word order by id asc limit " + offset + " ," + limit;
 		Cursor cursor = db.rawQuery(sql, null);
 		/* 循环添加到List */
 		for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
@@ -77,7 +76,7 @@ public class WordManager {
 		Word word = new Word();
 
 		/* 从数据库取 */
-		String sql = "select from wr_word where id=" + id + "order by id asc";
+		String sql = "select from wr_word where id=" + id + " order by id asc";
 		Cursor cursor = db.rawQuery(sql, null);
 
 		for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {

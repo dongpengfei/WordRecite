@@ -1,9 +1,9 @@
 package com.wordrecite.activity.word;
 
+import com.wordrecite.activity.R;
+
 import android.app.Activity;
 import android.os.Bundle;
-
-import com.wordrecite.R;
 
 public class ReciteListActivity extends Activity {
 
