@@ -16,17 +16,17 @@ public class DBHandler extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		/* 建表wr_word */
 		String createTable = "CREATE TABLE wr_word ("
-				+ "_id integer primary key autoincrement,"
+				+ "id integer primary key autoincrement,"
 				+ "english varchar(30) not null,"
-				+ "chinese varchar(50) not null,"
-				+ "property varchar(10) not null," + "soundmark varchar(30),"
-				+ "sound varchar(50)," + "sentence varchar(100),"
-				+ "image varchar(50)," + "status integer(5) not null,"
-				+ "created_time timestamp not null,"
-				+ "modified_time timestamp not null);";
+				+ "chinese varchar(50) not null," + "property varchar(10) ,"
+				+ "soundmark varchar(30) ," + "sentence varchar(100),"
+				+ "sound varchar(50)," + "image varchar(50),"
+				+ "status integer(5) not null,"
+				+ "created_time varchar(20) not null,"
+				+ "modified_time varchar(20) not null);";
 		db.execSQL(createTable);
 		/* 初始化数据 */
-		String initData = "insert into wr_word values (null, 'hello', '你好', 'n', 'hə''lo', '', 'Hello, boy', '', 1, '2012-01-01', '2012-01-01')";
+		String initData = "insert into wr_word values (null, 'hello', '你好', 'n', 'hə''lo', 'Hello, boy', '', '', 1, '2012-01-01', '2012-01-01')";
 		db.execSQL(initData);
 	}
 
