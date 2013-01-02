@@ -106,6 +106,19 @@ public class WordManager {
 		return word;
 
 	}
+	
+	/**
+	 * 获取word表的总记录数
+	 * 
+	 * @return
+	 */
+	public int count() {
+		db = helper.getWritableDatabase();
+		String sql = "select count(*) from wr_word";
+		Cursor cursor = db.rawQuery(sql, null);
+		cursor.moveToFirst();
+		return cursor.getInt(0);
+	}
 
 	/**
 	 * 插入新单词

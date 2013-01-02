@@ -16,7 +16,7 @@ public class DBHandler extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		/* 建表wr_word */
 		String createTable = "CREATE TABLE wr_word ("
-				+ "id integer primary key autoincrement,"
+				+ "_id integer primary key autoincrement,"
 				+ "english varchar(30) not null,"
 				+ "chinese varchar(50) not null," + "property varchar(10) ,"
 				+ "soundmark varchar(30) ," + "sentence varchar(100),"
@@ -26,8 +26,11 @@ public class DBHandler extends SQLiteOpenHelper {
 				+ "modified_time varchar(20) not null);";
 		db.execSQL(createTable);
 		/* 初始化数据 */
-		String initData = "insert into wr_word values (null, 'hello', '你好', 'n', 'hə''lo', 'Hello, boy', '', '', 1, '2012-01-01', '2012-01-01')";
+		String initData = "insert into wr_word values ('hello', '你好', 'n', 'hə''lo', 'Hello, boy', '', '', 1, '2012-01-01', '2012-01-01')";
 		db.execSQL(initData);
+		String initData1 = "insert into wr_word values ('hello1', '你好', 'n', 'hə''lo', 'Hello, boy', '', '', 1, '2012-01-01', '2012-01-01')";
+		db.execSQL(initData1);
+		
 	}
 
 	@Override
