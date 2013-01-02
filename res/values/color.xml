@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="newword_list_clolor_first">#F6F7FB</color>
+    <color name="newword_list_color_second">#DDE8F3</color>
+	<color name="newword_list_color_third">#C4D8EA</color>
+	<color name="newword_list_color_forth">#99C5DA</color>
+	<color name="newword_list_color_fifth">#68A7CB</color>
+	<color name="newword_prior_color">#0E315D</color>
+</resources>

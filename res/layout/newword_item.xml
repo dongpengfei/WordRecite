@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/newword_item_ll"
+    android:orientation="vertical" >
+    <TextView android:id="@+id/item_newword_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"/>
+    <TextView android:id="@+id/item_newword_explane"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="简明释义"
+        android:textSize="14sp"/>
+    <LinearLayout 
+        android:id="@+id/item_newword_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView 
+            android:id="@+id/item_newword_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"/>
+        <TextView 
+            android:id="@+id/item_newword_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>
