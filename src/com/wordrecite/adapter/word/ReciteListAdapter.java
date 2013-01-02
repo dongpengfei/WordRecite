@@ -1,4 +1,4 @@
-package com.wordrecite.adapter;
+package com.wordrecite.adapter.word;
 
 public class ReciteListAdapter {
 
