@@ -21,7 +21,7 @@ public class NewWordListActivity extends Activity {
 	private List<Word> wordList;
 	private ListView lvWordList;
 	private MachineMetrics machineMetrics;
-	private int[] colors = { R.color.newword_list_clolor_first,
+	private int[] colors = { R.color.newword_list_color_first,
 			R.color.newword_list_color_second,
 			R.color.newword_list_color_third, R.color.newword_list_color_forth,
 			R.color.newword_list_color_fifth };
