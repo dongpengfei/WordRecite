@@ -19,7 +19,6 @@ public class WordManager {
 
 	public WordManager(Context context) {
 		helper = new DBHandler(context);
-		db = helper.getWritableDatabase();
 	}
 
 	/**
@@ -33,7 +32,9 @@ public class WordManager {
 		List<Word> wordList = new ArrayList<Word>();
 
 		/* 从数据库取 */
-		String sql = "select * from wr_word order by id asc limit " + offset + " ," + limit;
+		db = helper.getWritableDatabase();
+		String sql = "select * from wr_word order by id asc limit " + offset
+				+ " ," + limit;
 		Cursor cursor = db.rawQuery(sql, null);
 		/* 循环添加到List */
 		for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
@@ -76,6 +77,7 @@ public class WordManager {
 		Word word = new Word();
 
 		/* 从数据库取 */
+		db = helper.getWritableDatabase();
 		String sql = "select from wr_word where id=" + id + " order by id asc";
 		Cursor cursor = db.rawQuery(sql, null);
 
@@ -103,10 +105,11 @@ public class WordManager {
 			}
 		}
 
+		db.close();
 		return word;
 
 	}
-	
+
 	/**
 	 * 获取word表的总记录数
 	 * 
@@ -117,6 +120,7 @@ public class WordManager {
 		String sql = "select count(*) from wr_word";
 		Cursor cursor = db.rawQuery(sql, null);
 		cursor.moveToFirst();
+		db.close();
 		return cursor.getInt(0);
 	}
 
