@@ -3,9 +3,12 @@ package com.wordrecite.activity.word;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -38,7 +41,18 @@ public class NewWordListActivity extends Activity {
 		NewWordListAdapter adapter = new NewWordListAdapter(this, wordList,
 				colors);
 		lvWordList.setAdapter(adapter);
-
+		/*ListView监听事件*/
+	    lvWordList.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				Intent intent =new Intent();
+				intent.putExtra(wordList.get(arg2).getEnglish(), wordList.get(arg2).getId());
+				intent.setClass(NewWordListActivity.this, NewWordDetailActivity.class);
+				startActivity(intent);
+			}
+	    	
+		});
 		/* 翻页按钮样式 */
 		machineMetrics = new MachineMetrics(this);
 		TextView prior = (TextView) findViewById(R.id.newword_list_prior);
