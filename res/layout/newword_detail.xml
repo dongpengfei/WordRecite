@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" 
     android:background="#669FC0">
-    
+    <TextView 
+        android:id="@+id/dewword_detail_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:background="@color/newword_list_color_first"
+        android:text="单词详情"
+        android:textColor="@color/textcolor_black"/>    
 
 </LinearLayout>

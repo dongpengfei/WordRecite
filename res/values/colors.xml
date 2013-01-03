@@ -7,5 +7,8 @@
     <color name="newword_list_color_forth">#99C5DA</color>
     <color name="newword_list_color_fifth">#68A7CB</color>
     <color name="newword_prior_color">#0E315D</color>
+    <color name="background_white">#E8EBF2</color>
+    <color name="background_bule">#669FC0</color>
+    <color name="textcolor_black">#231916</color>
 
 </resources>
